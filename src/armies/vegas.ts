@@ -55,8 +55,9 @@ export const vegasDeck: Deck = [
   vegasMine
 ];
 
+export const vegadColor = '#723f14';
 export const vegasArmy: Army = {
-  color: '#723f14',
-  deck: vegasDeck,
+  color: vegadColor,
+  deck: vegasDeck.map(tile => ({ ...tile, color: vegadColor })),
   hq: vegasHQ
 };

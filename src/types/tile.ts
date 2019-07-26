@@ -75,5 +75,3 @@ export interface FoundationTile extends BaseTile {
   tileType: TileTypes.Foundation,
   type: FoundationTiles
 }
-
-export type Tile = HQTile | SoldierTile | ModuleTile | FoundationTile | ActionTile;
