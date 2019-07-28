@@ -6,7 +6,7 @@ export enum VegasSoldierTiles {
 }
 
 export enum VegasModuleTiles {
-  Agitator = 'Marksman',
+  Agitator = 'Agitator',
   Medic = 'Medic',
   Saboteur = 'Saboteur',
   Scout = 'Scout'

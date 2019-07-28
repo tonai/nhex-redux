@@ -34,7 +34,7 @@ export const smartTwister: SoldierTile = {
   initiative: [2, 1],
   melee:  [2, 1, 0, 1, 0, 1],
   tileType: TileTypes.Soldier,
-  type: SmartSoldierTiles.Ripper,
+  type: SmartSoldierTiles.Twister,
   toughness: 1,
   wounds: 0
 };
@@ -87,7 +87,7 @@ export const smartTransporter: SoldierTile = {
 export const smartBioDroid: SoldierTile = {
   flashBack: true,
   initiative: 3,
-  range: [1, 0, 0, 0, 0, 0],
+  range: [0, 1, 0, 0, 0, 1],
   tileType: TileTypes.Soldier,
   type: SmartSoldierTiles.BioDroid,
   toughness: 1,

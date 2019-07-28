@@ -15,7 +15,8 @@ export interface ModuleArmyTile extends ArmyTile, ModuleTile {}
 export interface FoundationArmyTile extends ArmyTile, FoundationTile {}
 
 export type Tile = HQTile | SoldierTile | ModuleTile | FoundationTile | ActionTile;
-export type FinalTile = HQArmyTile | SoldierArmyTile | ModuleArmyTile | FoundationArmyTile | ActionTile;
+export type BoardTile = HQArmyTile | SoldierArmyTile | ModuleArmyTile;
+export type FinalTile = BoardTile | FoundationArmyTile | ActionTile;
 
 export type Deck = [
   Tile, Tile, Tile, Tile, Tile, Tile, Tile, Tile, Tile, Tile,

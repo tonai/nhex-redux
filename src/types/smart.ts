@@ -1,5 +1,5 @@
 export enum SmartSoldierTiles {
-  BioDroid = 'Transporter',
+  BioDroid = 'BioDroid',
   Cyborg = 'Cyborg',
   GaussCannon = 'GaussCannon',
   GolemMK3 = 'GolemMK3',
