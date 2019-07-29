@@ -59,6 +59,6 @@ export const smartDeck: Deck = [
 export const smartColor = '#909090';
 export const smartArmy: Army = {
   color: smartColor,
-  deck: smartDeck.map(tile => ({ ...tile, color: smartColor })),
+  deck: smartDeck,
   hq: smartHQ
 };

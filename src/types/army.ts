@@ -5,18 +5,9 @@ export enum Armies {
   Vegas = 'Vegas'
 }
 
-export interface ArmyTile {
-  color: string
-}
-
-export interface HQArmyTile extends ArmyTile, HQTile {}
-export interface SoldierArmyTile extends ArmyTile, SoldierTile {}
-export interface ModuleArmyTile extends ArmyTile, ModuleTile {}
-export interface FoundationArmyTile extends ArmyTile, FoundationTile {}
-
-export type Tile = HQTile | SoldierTile | ModuleTile | FoundationTile | ActionTile;
-export type BoardTile = HQArmyTile | SoldierArmyTile | ModuleArmyTile;
-export type FinalTile = BoardTile | FoundationArmyTile | ActionTile;
+export type BoardTile = HQTile | SoldierTile | ModuleTile;
+export type ArmyTile = BoardTile | FoundationTile;
+export type Tile = ArmyTile | ActionTile;
 
 export type Deck = [
   Tile, Tile, Tile, Tile, Tile, Tile, Tile, Tile, Tile, Tile,
@@ -27,6 +18,6 @@ export type Deck = [
 
 export interface Army {
   color: string,
-  deck: FinalTile[],
+  deck: Deck,
   hq: HQTile
 }
