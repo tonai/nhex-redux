@@ -1,4 +1,4 @@
-import { Direction, Foundations, Modules } from './common';
+import { Armies, Direction, Foundations, Modules } from './common';
 import { SmartSoldierTiles, SmartModuleTiles, SmartFoundationTiles } from './smart';
 import { VegasSoldierTiles, VegasModuleTiles, VegasFoundationTiles } from './vegas';
 
@@ -40,6 +40,7 @@ export interface ActionTile extends BaseTile {
 
 export interface ClassicTile extends BaseTile {
   armor?: [boolean, boolean, boolean, boolean, boolean, boolean]
+  army: Armies
   direction?: Direction
   flashBack?: boolean
   initiative?: number | number[]
@@ -71,6 +72,7 @@ export interface ModuleTile extends ClassicTile {
 }
 
 export interface FoundationTile extends BaseTile {
+  army: Armies
   foundationType: Foundations
   tileType: TileTypes.Foundation,
   type: FoundationTiles

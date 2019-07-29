@@ -1,10 +1,12 @@
 import {
+  Armies,
   Foundations,
   FoundationTile,
   HQTile,
   Modules,
   ModuleTile,
-  SoldierTile, TileTypes,
+  SoldierTile,
+  TileTypes,
   VegasFoundationTiles,
   VegasModuleTiles,
   VegasSoldierTiles
@@ -12,6 +14,7 @@ import {
 
 /** HQ */
 export const vegasHQ: HQTile = {
+  army: Armies.Vegas,
   initiative: 0,
   melee: [0, 1, 1, 1, 1, 1],
   module: [true, false, false, false, false, false],
@@ -24,6 +27,7 @@ export const vegasHQ: HQTile = {
 
 /** Soldiers */
 export const vegasMercenary: SoldierTile = {
+  army: Armies.Vegas,
   initiative: 1,
   range: [2, 0, 0, 0, 0, 0],
   tileType: TileTypes.Soldier,
@@ -33,6 +37,7 @@ export const vegasMercenary: SoldierTile = {
 };
 
 export const vegasBodyguard: SoldierTile = {
+  army: Armies.Vegas,
   initiative: 2,
   melee: [1, 1, 0, 0, 0, 1],
   tileType: TileTypes.Soldier,
@@ -43,6 +48,7 @@ export const vegasBodyguard: SoldierTile = {
 
 export const vegasGuard: SoldierTile = {
   armor: [true, true, false, false, false, true],
+  army: Armies.Vegas,
   tileType: TileTypes.Soldier,
   type: VegasSoldierTiles.Guard,
   toughness: 2,
@@ -50,6 +56,7 @@ export const vegasGuard: SoldierTile = {
 };
 
 export const vegasMarksman: SoldierTile = {
+  army: Armies.Vegas,
   initiative: 3,
   range: [3, 0, 0, 0, 0, 0],
   tileType: TileTypes.Soldier,
@@ -60,6 +67,7 @@ export const vegasMarksman: SoldierTile = {
 
 /** Modules */
 export const vegasAgitator: ModuleTile = {
+  army: Armies.Vegas,
   module: [true, false, false, false, false, false],
   moduleType: Modules.Takeover,
   tileType: TileTypes.Module,
@@ -69,7 +77,8 @@ export const vegasAgitator: ModuleTile = {
 };
 
 export const vegasSaboteur: ModuleTile = {
-  module: [true, false, false, false, false, false],
+  army: Armies.Vegas,
+  module: [true, true, true, true, true, true],
   moduleType: Modules.Saboteur,
   tileType: TileTypes.Module,
   type: VegasModuleTiles.Saboteur,
@@ -78,6 +87,7 @@ export const vegasSaboteur: ModuleTile = {
 };
 
 export const vegasMedic: ModuleTile = {
+  army: Armies.Vegas,
   module: [true, false, false, false, false, false],
   moduleType: Modules.Medic,
   tileType: TileTypes.Module,
@@ -87,6 +97,7 @@ export const vegasMedic: ModuleTile = {
 };
 
 export const vegasScout: ModuleTile = {
+  army: Armies.Vegas,
   module: [true, false, false, false, false, false],
   moduleType: Modules.Scout,
   tileType: TileTypes.Module,
@@ -97,6 +108,7 @@ export const vegasScout: ModuleTile = {
 
 /** Foundations */
 export const vegasMine: FoundationTile = {
+  army: Armies.Vegas,
   foundationType: Foundations.Mine,
   tileType: TileTypes.Foundation,
   type: VegasFoundationTiles.Mine

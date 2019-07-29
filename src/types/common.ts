@@ -13,3 +13,8 @@ export enum Modules {
 export enum Foundations {
   Mine = 'Mine'
 }
+
+export enum Armies {
+  Smart = 'Smart',
+  Vegas = 'Vegas'
+}

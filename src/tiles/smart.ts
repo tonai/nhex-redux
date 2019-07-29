@@ -1,4 +1,5 @@
 import {
+  Armies,
   HQTile,
   Modules,
   ModuleTile,
@@ -10,6 +11,7 @@ import {
 
 /** HQ */
 export const smartHQ: HQTile = {
+  army: Armies.Smart,
   initiative: 0,
   melee: [1, 1, 1, 1, 1, 1],
   module: [true, true, true, true, true, true],
@@ -22,6 +24,7 @@ export const smartHQ: HQTile = {
 
 /** Soldiers */
 export const smartRipper: SoldierTile = {
+  army: Armies.Smart,
   initiative: 2,
   melee: [2, 0, 0, 0, 0, 0],
   tileType: TileTypes.Soldier,
@@ -31,6 +34,8 @@ export const smartRipper: SoldierTile = {
 };
 
 export const smartTwister: SoldierTile = {
+  armor: [false, false, false, true, false, false],
+  army: Armies.Smart,
   initiative: [2, 1],
   melee:  [2, 1, 0, 1, 0, 1],
   tileType: TileTypes.Soldier,
@@ -40,6 +45,7 @@ export const smartTwister: SoldierTile = {
 };
 
 export const smartNetFighter: SoldierTile = {
+  army: Armies.Smart,
   net: [true, false, false, false, false, false],
   tileType: TileTypes.Soldier,
   type: SmartSoldierTiles.NetFighter,
@@ -48,6 +54,7 @@ export const smartNetFighter: SoldierTile = {
 };
 
 export const smartGaussCannon: SoldierTile = {
+  army: Armies.Smart,
   initiative: 2,
   percing: [1, 0, 0, 0, 0, 0],
   tileType: TileTypes.Soldier,
@@ -57,6 +64,7 @@ export const smartGaussCannon: SoldierTile = {
 };
 
 export const smartGolemMK3: SoldierTile = {
+  army: Armies.Smart,
   initiative: 2,
   range: [2, 0, 0, 0, 0, 0],
   tileType: TileTypes.Soldier,
@@ -66,6 +74,7 @@ export const smartGolemMK3: SoldierTile = {
 };
 
 export const smartCyborg: SoldierTile = {
+  army: Armies.Smart,
   initiative: 3,
   range: [1, 0, 0, 0, 0, 0],
   tileType: TileTypes.Soldier,
@@ -76,6 +85,7 @@ export const smartCyborg: SoldierTile = {
 
 export const smartTransporter: SoldierTile = {
   armor: [true, false, false, false, false, true],
+  army: Armies.Smart,
   mobility: true,
   replace: true,
   tileType: TileTypes.Soldier,
@@ -85,6 +95,7 @@ export const smartTransporter: SoldierTile = {
 };
 
 export const smartBioDroid: SoldierTile = {
+  army: Armies.Smart,
   flashBack: true,
   initiative: 3,
   range: [0, 1, 0, 0, 0, 1],
@@ -96,6 +107,7 @@ export const smartBioDroid: SoldierTile = {
 
 /** Modules */
 export const smartOfficer: ModuleTile = {
+  army: Armies.Smart,
   module: [true, false, false, false, false, false],
   moduleType: Modules.Officer,
   tileType: TileTypes.Module,
@@ -105,6 +117,7 @@ export const smartOfficer: ModuleTile = {
 };
 
 export const smartMother: ModuleTile = {
+  army: Armies.Smart,
   module: [true, false, false, false, false, false],
   moduleType: Modules.Mother,
   tileType: TileTypes.Module,
@@ -114,6 +127,7 @@ export const smartMother: ModuleTile = {
 };
 
 export const smartScout: ModuleTile = {
+  army: Armies.Smart,
   module: [true, false, false, false, false, false],
   moduleType: Modules.Scout,
   tileType: TileTypes.Module,
