@@ -18,7 +18,7 @@ export const vegasHQ: HQTile = {
   initiative: 0,
   melee: [0, 1, 1, 1, 1, 1],
   module: [true, false, false, false, false, false],
-  moduleType: Modules.Takeover,
+  moduleType: Modules.Agitator,
   tileType: TileTypes.HQ,
   type: 'HQ',
   toughness: 20,
@@ -69,7 +69,7 @@ export const vegasMarksman: SoldierTile = {
 export const vegasAgitator: ModuleTile = {
   army: Armies.Vegas,
   module: [true, false, false, false, false, false],
-  moduleType: Modules.Takeover,
+  moduleType: Modules.Agitator,
   tileType: TileTypes.Module,
   type: VegasModuleTiles.Agitator,
   toughness: 1,
