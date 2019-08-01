@@ -20,8 +20,6 @@ export enum ActionTiles {
   Terror = 'Terror'
 }
 
-// export type HQTiles = 'HQ';
-
 export type SoldierTiles = SmartSoldierTiles | VegasSoldierTiles;
 
 export type ModuleTiles = SmartModuleTiles | VegasModuleTiles;
