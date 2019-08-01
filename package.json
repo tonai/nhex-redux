@@ -9,6 +9,7 @@
     "typescript": "3.5.3"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "typescript": "tsc --noEmit"
   }
 }

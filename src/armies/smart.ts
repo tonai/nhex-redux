@@ -1,4 +1,5 @@
-import { Army, Deck } from '../types';
+import { addArmyData } from '../services';
+import { Armies, Army, Deck, HQArmyTile } from '../types';
 import {
   battle,
   move,
@@ -57,8 +58,10 @@ export const smartDeck: Deck = [
 ];
 
 export const smartColor = '#909090';
+export const addSmartArmyData = addArmyData(Armies.Smart, smartColor);
+
 export const smartArmy: Army = {
   color: smartColor,
-  deck: smartDeck,
-  hq: smartHQ
+  deck: smartDeck.map(addSmartArmyData),
+  hq: addSmartArmyData(smartHQ) as HQArmyTile
 };

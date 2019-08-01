@@ -1,4 +1,5 @@
-import { Army, Deck } from '../types';
+import { addArmyData } from '../services';
+import { Armies, Army, Deck, HQArmyTile } from '../types';
 import {
   battle,
   castling,
@@ -55,9 +56,11 @@ export const vegasDeck: Deck = [
   vegasMine
 ];
 
-export const vegadColor = '#723f14';
+export const vegasColor = '#723f14';
+export const addVegasArmyData = addArmyData(Armies.Vegas, vegasColor);
+
 export const vegasArmy: Army = {
-  color: vegadColor,
-  deck: vegasDeck,
-  hq: vegasHQ
+  color: vegasColor,
+  deck: vegasDeck.map(addVegasArmyData),
+  hq: addVegasArmyData(vegasHQ) as HQArmyTile
 };

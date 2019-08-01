@@ -1,4 +1,4 @@
-import { Armies, Direction, Foundations, Modules } from './common';
+import { Foundations, Modules } from './common';
 import { SmartSoldierTiles, SmartModuleTiles, SmartFoundationTiles } from './smart';
 import { VegasSoldierTiles, VegasModuleTiles, VegasFoundationTiles } from './vegas';
 
@@ -20,7 +20,7 @@ export enum ActionTiles {
   Terror = 'Terror'
 }
 
-export type HQTiles = 'HQ';
+// export type HQTiles = 'HQ';
 
 export type SoldierTiles = SmartSoldierTiles | VegasSoldierTiles;
 
@@ -29,51 +29,50 @@ export type ModuleTiles = SmartModuleTiles | VegasModuleTiles;
 export type FoundationTiles = SmartFoundationTiles | VegasFoundationTiles;
 
 export interface BaseTile {
-  type: ActionTiles | SoldierTiles | ModuleTiles | FoundationTiles | HQTiles
-  tileType: TileTypes
+  type: TileTypes
 }
 
 export interface ActionTile extends BaseTile {
-  type: ActionTiles
-  tileType: TileTypes.Action
+  actionType: ActionTiles
+  type: TileTypes.Action
 }
 
-export interface ClassicTile extends BaseTile {
+export interface BaseBoardTile extends BaseTile {
+  toughness: number
+}
+
+export interface HQTile extends BaseBoardTile {
+  initiative: number
+  melee: [number, number, number, number, number, number]
+  module: [boolean, boolean, boolean, boolean, boolean, boolean]
+  moduleType: Modules
+  type: TileTypes.HQ
+}
+
+export interface SoldierTile extends BaseBoardTile {
   armor?: [boolean, boolean, boolean, boolean, boolean, boolean]
-  army: Armies
-  direction?: Direction
   flashBack?: boolean
   initiative?: number | number[]
   melee?: [number, number, number, number, number, number]
   mobility?: boolean
-  module?: [boolean, boolean, boolean, boolean, boolean, boolean]
-  moduleType?: Modules
   percing?: [number, number, number, number, number, number]
+  name: SoldierTiles
   net?: [boolean, boolean, boolean, boolean, boolean, boolean]
   range?: [number, number, number, number, number, number]
   replace?: boolean
-  toughness: number
-  wounds: number
+  type: TileTypes.Soldier
 }
 
-export interface HQTile extends ClassicTile {
-  tileType: TileTypes.HQ,
-  type: HQTiles
-}
-
-export interface SoldierTile extends ClassicTile {
-  tileType: TileTypes.Soldier,
-  type: SoldierTiles
-}
-
-export interface ModuleTile extends ClassicTile {
-  tileType: TileTypes.Module,
-  type: ModuleTiles
+export interface ModuleTile extends BaseBoardTile {
+  armor?: [boolean, boolean, boolean, boolean, boolean, boolean]
+  module: [boolean, boolean, boolean, boolean, boolean, boolean]
+  moduleType: Modules
+  name: ModuleTiles
+  type: TileTypes.Module
 }
 
 export interface FoundationTile extends BaseTile {
-  army: Armies
   foundationType: Foundations
-  tileType: TileTypes.Foundation,
-  type: FoundationTiles
+  name: FoundationTiles
+  type: TileTypes.Foundation
 }
