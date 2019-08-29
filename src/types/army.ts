@@ -2,9 +2,12 @@ import { Armies, Direction } from './common';
 import { ActionTile, FoundationTile, HQTile, ModuleTile, SoldierTile } from './tile';
 
 export interface BaseArmyTile {
+  active: boolean
   army: Armies
   color: string
   direction: Direction
+  hidden: boolean
+  id: number
   wounds: number
 }
 
